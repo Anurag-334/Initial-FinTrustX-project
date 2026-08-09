@@ -1,0 +1,2 @@
+selected_model,selection_metric,selection_score,model_path
+Random Forest,Held-out ROC AUC,0.7381874543859441,D:\Projects\Credit-risk-ai\models\best_model.joblib
