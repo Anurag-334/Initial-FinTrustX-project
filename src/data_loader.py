@@ -23,6 +23,7 @@ Used by:
 """
 
 from pathlib import Path
+from typing import Any, Callable, Dict, List, Optional, Union
 import pandas as pd
 import numpy as np
 import logging
@@ -56,18 +57,37 @@ class DataLoader:
 
     # --------------------------------------------------
 
-    def load_csv(self, filename: str) -> pd.DataFrame:
+    def load_csv(
+        self,
+        filename: str,
+        usecols: Optional[Union[List[str], Callable[[str], bool]]] = None,
+        dtype: Optional[Union[Dict[str, Any], str, type]] = None,
+        **kwargs: Any,
+    ) -> pd.DataFrame:
 
         """
-        Load CSV file.
+        Load CSV file from raw data directory.
 
         Parameters
         ----------
         filename : str
+            Name of CSV file located within self.raw_data_dir.
+        usecols : list of str or callable, optional
+            Subset of columns to read. If None, all columns are returned.
+        dtype : dict, str, or type, optional
+            Data type specification for columns.
+        **kwargs : Any
+            Additional keyword arguments forwarded to pd.read_csv.
 
         Returns
         -------
         DataFrame
+            Loaded dataset.
+
+        Raises
+        ------
+        FileNotFoundError
+            If specified file does not exist.
         """
 
         path = self.raw_data_dir / filename
@@ -80,7 +100,12 @@ class DataLoader:
 
         logger.info(f"Loading {filename}")
 
-        df = pd.read_csv(path)
+        df = pd.read_csv(
+            path,
+            usecols=usecols,
+            dtype=dtype,
+            **kwargs,
+        )
 
         logger.info(f"Shape : {df.shape}")
 

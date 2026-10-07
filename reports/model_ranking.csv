@@ -1,0 +1,7 @@
+Ranking Dimension,Best Model,Score,Risk Significance
+Configured Primary Metric,champion_persisted,0.7610,Overall project benchmark ranking (ROC AUC)
+ROC AUC,champion_persisted,0.7610,Global discrimination capability across all thresholds
+Average Precision,champion_persisted,0.2507,Precision-Recall tradeoff on minority default class
+Recall,decision_tree,0.6828,Default capture rate at threshold = 0.50 (Loss avoidance)
+F1 Score,random_forest,0.2786,Harmonic balance between default detection and false alerts
+Balanced Accuracy,champion_persisted,0.6922,Macro average of sensitivity and specificity

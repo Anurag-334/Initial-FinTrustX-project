@@ -1,0 +1,1472 @@
+[
+    {
+        "feature": "num__EXT_SOURCE_2",
+        "feature value": 0.41853158088690695,
+        "SHAP value": -0.030573300475532042,
+        "contribution direction": "decreases predicted default risk"
+    },
+    {
+        "feature": "cat__NAME_EDUCATION_TYPE_Higher education",
+        "feature value": 1.0,
+        "SHAP value": -0.02120334691606379,
+        "contribution direction": "decreases predicted default risk"
+    },
+    {
+        "feature": "cat__NAME_EDUCATION_TYPE_Secondary / secondary special",
+        "feature value": 0.0,
+        "SHAP value": -0.01883569111985844,
+        "contribution direction": "decreases predicted default risk"
+    },
+    {
+        "feature": "num__AMT_GOODS_PRICE",
+        "feature value": 0.4058238274313469,
+        "SHAP value": -0.015987430284137464,
+        "contribution direction": "decreases predicted default risk"
+    },
+    {
+        "feature": "num__DEF_60_CNT_SOCIAL_CIRCLE",
+        "feature value": -0.27478719718343664,
+        "SHAP value": 0.013037028229357246,
+        "contribution direction": "increases predicted default risk"
+    },
+    {
+        "feature": "num__DAYS_LAST_PHONE_CHANGE",
+        "feature value": 0.6466837519702414,
+        "SHAP value": -0.012845275081893448,
+        "contribution direction": "decreases predicted default risk"
+    },
+    {
+        "feature": "cat__CODE_GENDER_M",
+        "feature value": 1.0,
+        "SHAP value": 0.012428984302389463,
+        "contribution direction": "increases predicted default risk"
+    },
+    {
+        "feature": "num__DEF_30_CNT_SOCIAL_CIRCLE",
+        "feature value": -0.3196958110490211,
+        "SHAP value": 0.012206160991486442,
+        "contribution direction": "increases predicted default risk"
+    },
+    {
+        "feature": "num__EXT_SOURCE_3",
+        "feature value": -0.50416886596858,
+        "SHAP value": -0.011536455277368149,
+        "contribution direction": "decreases predicted default risk"
+    },
+    {
+        "feature": "num__DAYS_EMPLOYED",
+        "feature value": -0.4514142831111011,
+        "SHAP value": 0.011270680871284989,
+        "contribution direction": "increases predicted default risk"
+    },
+    {
+        "feature": "num__DAYS_ID_PUBLISH",
+        "feature value": -0.9334191872475449,
+        "SHAP value": 0.010177279515994285,
+        "contribution direction": "increases predicted default risk"
+    },
+    {
+        "feature": "num__AMT_INCOME_TOTAL",
+        "feature value": -0.04384142746037546,
+        "SHAP value": -0.009993618881642382,
+        "contribution direction": "decreases predicted default risk"
+    },
+    {
+        "feature": "num__AMT_CREDIT",
+        "feature value": 0.42449256894096027,
+        "SHAP value": -0.009844020461699113,
+        "contribution direction": "decreases predicted default risk"
+    },
+    {
+        "feature": "cat__CODE_GENDER_F",
+        "feature value": 0.0,
+        "SHAP value": 0.008687962092574776,
+        "contribution direction": "increases predicted default risk"
+    },
+    {
+        "feature": "cat__NAME_INCOME_TYPE_Working",
+        "feature value": 1.0,
+        "SHAP value": -0.007653717566061755,
+        "contribution direction": "decreases predicted default risk"
+    },
+    {
+        "feature": "cat__FLAG_OWN_CAR_N",
+        "feature value": 0.0,
+        "SHAP value": -0.0066620524674705014,
+        "contribution direction": "decreases predicted default risk"
+    },
+    {
+        "feature": "cat__FLAG_OWN_CAR_Y",
+        "feature value": 1.0,
+        "SHAP value": -0.006125158351396495,
+        "contribution direction": "decreases predicted default risk"
+    },
+    {
+        "feature": "num__AMT_REQ_CREDIT_BUREAU_MON",
+        "feature value": -0.26913581432232603,
+        "SHAP value": -0.005826568086624035,
+        "contribution direction": "decreases predicted default risk"
+    },
+    {
+        "feature": "num__NONLIVINGAREA_MODE",
+        "feature value": -0.2390609711524782,
+        "SHAP value": -0.00554124915953048,
+        "contribution direction": "decreases predicted default risk"
+    },
+    {
+        "feature": "num__EXT_SOURCE_1",
+        "feature value": 0.011860751931943669,
+        "SHAP value": 0.004752670124719245,
+        "contribution direction": "increases predicted default risk"
+    },
+    {
+        "feature": "num__LIVINGAREA_MEDI",
+        "feature value": -0.20816592439561388,
+        "SHAP value": -0.004509882037025794,
+        "contribution direction": "decreases predicted default risk"
+    },
+    {
+        "feature": "num__DAYS_BIRTH",
+        "feature value": 0.5784086088753815,
+        "SHAP value": -0.003992052030892819,
+        "contribution direction": "decreases predicted default risk"
+    },
+    {
+        "feature": "num__YEARS_BUILD_MEDI",
+        "feature value": 0.013106653687673784,
+        "SHAP value": -0.0037807961826396112,
+        "contribution direction": "decreases predicted default risk"
+    },
+    {
+        "feature": "num__BASEMENTAREA_AVG",
+        "feature value": -0.09397666927867288,
+        "SHAP value": -0.003698471387860418,
+        "contribution direction": "decreases predicted default risk"
+    },
+    {
+        "feature": "num__NONLIVINGAREA_MEDI",
+        "feature value": -0.2325097989606919,
+        "SHAP value": -0.0034768883950098426,
+        "contribution direction": "decreases predicted default risk"
+    },
+    {
+        "feature": "num__REG_CITY_NOT_WORK_CITY",
+        "feature value": -0.548148500302017,
+        "SHAP value": -0.0033284368875421727,
+        "contribution direction": "decreases predicted default risk"
+    },
+    {
+        "feature": "num__LANDAREA_MEDI",
+        "feature value": -0.141036560793049,
+        "SHAP value": -0.0032368148964480405,
+        "contribution direction": "decreases predicted default risk"
+    },
+    {
+        "feature": "num__LANDAREA_AVG",
+        "feature value": -0.14012255847192995,
+        "SHAP value": -0.003220243545354713,
+        "contribution direction": "decreases predicted default risk"
+    },
+    {
+        "feature": "num__YEARS_BEGINEXPLUATATION_MODE",
+        "feature value": 0.05064609077244184,
+        "SHAP value": -0.003166265299365387,
+        "contribution direction": "decreases predicted default risk"
+    },
+    {
+        "feature": "num__YEARS_BUILD_MODE",
+        "feature value": 0.026296305174521736,
+        "SHAP value": -0.0031240919406734526,
+        "contribution direction": "decreases predicted default risk"
+    },
+    {
+        "feature": "num__APARTMENTS_MEDI",
+        "feature value": -0.19239571810929756,
+        "SHAP value": -0.003103851828042247,
+        "contribution direction": "decreases predicted default risk"
+    },
+    {
+        "feature": "num__YEARS_BEGINEXPLUATATION_AVG",
+        "feature value": 0.047147730499208305,
+        "SHAP value": -0.0030064253521532355,
+        "contribution direction": "decreases predicted default risk"
+    },
+    {
+        "feature": "cat__OCCUPATION_TYPE_Laborers",
+        "feature value": 1.0,
+        "SHAP value": 0.002864813275692906,
+        "contribution direction": "increases predicted default risk"
+    },
+    {
+        "feature": "num__LIVINGAREA_AVG",
+        "feature value": -0.20631347438448272,
+        "SHAP value": -0.0027537738019426947,
+        "contribution direction": "decreases predicted default risk"
+    },
+    {
+        "feature": "num__FLAG_DOCUMENT_3",
+        "feature value": -1.5664023596130268,
+        "SHAP value": 0.0026338425286676886,
+        "contribution direction": "increases predicted default risk"
+    },
+    {
+        "feature": "num__LIVINGAREA_MODE",
+        "feature value": -0.20334804689181368,
+        "SHAP value": -0.002415967117463047,
+        "contribution direction": "decreases predicted default risk"
+    },
+    {
+        "feature": "cat__NAME_FAMILY_STATUS_Married",
+        "feature value": 1.0,
+        "SHAP value": -0.0023434324373603505,
+        "contribution direction": "decreases predicted default risk"
+    },
+    {
+        "feature": "num__REGION_POPULATION_RELATIVE",
+        "feature value": -0.774242360137702,
+        "SHAP value": -0.0023055086697866805,
+        "contribution direction": "decreases predicted default risk"
+    },
+    {
+        "feature": "num__TOTALAREA_MODE",
+        "feature value": -0.2213734126633698,
+        "SHAP value": 0.0023014530802526437,
+        "contribution direction": "increases predicted default risk"
+    },
+    {
+        "feature": "num__OBS_60_CNT_SOCIAL_CIRCLE",
+        "feature value": -0.16720760289920952,
+        "SHAP value": 0.0021758879116762814,
+        "contribution direction": "increases predicted default risk"
+    },
+    {
+        "feature": "num__COMMONAREA_AVG",
+        "feature value": -0.165050121285641,
+        "SHAP value": -0.002046669386174822,
+        "contribution direction": "decreases predicted default risk"
+    },
+    {
+        "feature": "num__REGION_RATING_CLIENT_W_CITY",
+        "feature value": -0.06259967105777514,
+        "SHAP value": -0.001923315384537449,
+        "contribution direction": "decreases predicted default risk"
+    },
+    {
+        "feature": "num__AMT_ANNUITY",
+        "feature value": 0.24575453541933806,
+        "SHAP value": 0.0018623385484171284,
+        "contribution direction": "increases predicted default risk"
+    },
+    {
+        "feature": "num__LANDAREA_MODE",
+        "feature value": -0.1462798915451668,
+        "SHAP value": -0.0018020342911740722,
+        "contribution direction": "decreases predicted default risk"
+    },
+    {
+        "feature": "cat__NAME_FAMILY_STATUS_Single / not married",
+        "feature value": 0.0,
+        "SHAP value": -0.0017348544017664045,
+        "contribution direction": "decreases predicted default risk"
+    },
+    {
+        "feature": "num__LIVINGAPARTMENTS_AVG",
+        "feature value": -0.14915724280613207,
+        "SHAP value": -0.001668482143358905,
+        "contribution direction": "decreases predicted default risk"
+    },
+    {
+        "feature": "num__CNT_FAM_MEMBERS",
+        "feature value": 0.9336215815678155,
+        "SHAP value": -0.0016532289101382606,
+        "contribution direction": "decreases predicted default risk"
+    },
+    {
+        "feature": "num__APARTMENTS_AVG",
+        "feature value": -0.19003491632307148,
+        "SHAP value": -0.0015613748251316587,
+        "contribution direction": "decreases predicted default risk"
+    },
+    {
+        "feature": "num__APARTMENTS_MODE",
+        "feature value": -0.19286411653685498,
+        "SHAP value": -0.0013596600544505716,
+        "contribution direction": "decreases predicted default risk"
+    },
+    {
+        "feature": "num__ENTRANCES_MODE",
+        "feature value": -0.05157685615855726,
+        "SHAP value": -0.0013583186192483228,
+        "contribution direction": "decreases predicted default risk"
+    },
+    {
+        "feature": "num__YEARS_BEGINEXPLUATATION_MEDI",
+        "feature value": 0.04648272490327233,
+        "SHAP value": -0.0013337866289423695,
+        "contribution direction": "decreases predicted default risk"
+    },
+    {
+        "feature": "num__COMMONAREA_MODE",
+        "feature value": -0.16790465669144528,
+        "SHAP value": -0.001308833735763731,
+        "contribution direction": "decreases predicted default risk"
+    },
+    {
+        "feature": "num__LIVINGAPARTMENTS_MODE",
+        "feature value": -0.1593276459268567,
+        "SHAP value": -0.001285903206152433,
+        "contribution direction": "decreases predicted default risk"
+    },
+    {
+        "feature": "cat__ORGANIZATION_TYPE_Business Entity Type 3",
+        "feature value": 0.0,
+        "SHAP value": 0.0012767707487568837,
+        "contribution direction": "increases predicted default risk"
+    },
+    {
+        "feature": "num__FLAG_WORK_PHONE",
+        "feature value": -0.4995007284560408,
+        "SHAP value": -0.0012683448354857913,
+        "contribution direction": "decreases predicted default risk"
+    },
+    {
+        "feature": "num__YEARS_BUILD_AVG",
+        "feature value": 0.01291327046606877,
+        "SHAP value": -0.0012656740767460247,
+        "contribution direction": "decreases predicted default risk"
+    },
+    {
+        "feature": "cat__WALLSMATERIAL_MODE_Stone, brick",
+        "feature value": 0.0,
+        "SHAP value": -0.0011885367773718852,
+        "contribution direction": "decreases predicted default risk"
+    },
+    {
+        "feature": "cat__ORGANIZATION_TYPE_XNA",
+        "feature value": 0.0,
+        "SHAP value": 0.0011629328201572715,
+        "contribution direction": "increases predicted default risk"
+    },
+    {
+        "feature": "num__FLAG_EMP_PHONE",
+        "feature value": 0.46769889807085346,
+        "SHAP value": 0.0010990137238996165,
+        "contribution direction": "increases predicted default risk"
+    },
+    {
+        "feature": "num__FLOORSMIN_MODE",
+        "feature value": -0.06789951213205672,
+        "SHAP value": -0.0010901348965768783,
+        "contribution direction": "decreases predicted default risk"
+    },
+    {
+        "feature": "num__CNT_CHILDREN",
+        "feature value": 0.8111074275670395,
+        "SHAP value": -0.0010822265322333584,
+        "contribution direction": "decreases predicted default risk"
+    },
+    {
+        "feature": "cat__NAME_INCOME_TYPE_Pensioner",
+        "feature value": 0.0,
+        "SHAP value": 0.0010428465827402372,
+        "contribution direction": "increases predicted default risk"
+    },
+    {
+        "feature": "cat__NAME_INCOME_TYPE_Commercial associate",
+        "feature value": 0.0,
+        "SHAP value": -0.0010333156476331669,
+        "contribution direction": "decreases predicted default risk"
+    },
+    {
+        "feature": "cat__NAME_CONTRACT_TYPE_Revolving loans",
+        "feature value": 0.0,
+        "SHAP value": 0.0010291955770326054,
+        "contribution direction": "increases predicted default risk"
+    },
+    {
+        "feature": "num__OBS_30_CNT_SOCIAL_CIRCLE",
+        "feature value": -0.17271278585016503,
+        "SHAP value": 0.001023089715726646,
+        "contribution direction": "increases predicted default risk"
+    },
+    {
+        "feature": "num__NONLIVINGAREA_AVG",
+        "feature value": -0.23123278056528054,
+        "SHAP value": -0.0009218081477100306,
+        "contribution direction": "decreases predicted default risk"
+    },
+    {
+        "feature": "num__REG_CITY_NOT_LIVE_CITY",
+        "feature value": -0.29064786973006385,
+        "SHAP value": -0.000918020337856821,
+        "contribution direction": "decreases predicted default risk"
+    },
+    {
+        "feature": "cat__NAME_HOUSING_TYPE_House / apartment",
+        "feature value": 1.0,
+        "SHAP value": -0.0009006656873791299,
+        "contribution direction": "decreases predicted default risk"
+    },
+    {
+        "feature": "cat__NAME_CONTRACT_TYPE_Cash loans",
+        "feature value": 1.0,
+        "SHAP value": 0.0008999671158485033,
+        "contribution direction": "increases predicted default risk"
+    },
+    {
+        "feature": "num__NONLIVINGAPARTMENTS_AVG",
+        "feature value": -0.10070831197846888,
+        "SHAP value": -0.0008073267011575502,
+        "contribution direction": "decreases predicted default risk"
+    },
+    {
+        "feature": "num__HOUR_APPR_PROCESS_START",
+        "feature value": 1.512951910578953,
+        "SHAP value": -0.0008022066757830793,
+        "contribution direction": "decreases predicted default risk"
+    },
+    {
+        "feature": "cat__WALLSMATERIAL_MODE_Panel",
+        "feature value": 1.0,
+        "SHAP value": -0.0007954611576945256,
+        "contribution direction": "decreases predicted default risk"
+    },
+    {
+        "feature": "num__REGION_RATING_CLIENT",
+        "feature value": -0.1027825251702723,
+        "SHAP value": -0.0007712934355879674,
+        "contribution direction": "decreases predicted default risk"
+    },
+    {
+        "feature": "cat__NAME_INCOME_TYPE_State servant",
+        "feature value": 0.0,
+        "SHAP value": 0.0006680084233443694,
+        "contribution direction": "increases predicted default risk"
+    },
+    {
+        "feature": "num__BASEMENTAREA_MEDI",
+        "feature value": -0.09451827310571317,
+        "SHAP value": -0.0006601872677930216,
+        "contribution direction": "decreases predicted default risk"
+    },
+    {
+        "feature": "cat__WEEKDAY_APPR_PROCESS_START_THURSDAY",
+        "feature value": 0.0,
+        "SHAP value": 0.0006541083539159072,
+        "contribution direction": "increases predicted default risk"
+    },
+    {
+        "feature": "num__FLOORSMAX_MODE",
+        "feature value": -0.2645038530896718,
+        "SHAP value": -0.0006271319510429223,
+        "contribution direction": "decreases predicted default risk"
+    },
+    {
+        "feature": "num__ENTRANCES_AVG",
+        "feature value": -0.08362100685343668,
+        "SHAP value": -0.0006012873944736409,
+        "contribution direction": "decreases predicted default risk"
+    },
+    {
+        "feature": "cat__WEEKDAY_APPR_PROCESS_START_WEDNESDAY",
+        "feature value": 0.0,
+        "SHAP value": -0.0005359048416392733,
+        "contribution direction": "decreases predicted default risk"
+    },
+    {
+        "feature": "[identifier excluded]",
+        "feature value": 1.1533691141680675,
+        "SHAP value": -0.0005119618815735732,
+        "contribution direction": "decreases predicted default risk"
+    },
+    {
+        "feature": "num__FLOORSMAX_MEDI",
+        "feature value": -0.2779598168452065,
+        "SHAP value": 0.0005090065900767165,
+        "contribution direction": "increases predicted default risk"
+    },
+    {
+        "feature": "num__OWN_CAR_AGE",
+        "feature value": 1.2634586590514623,
+        "SHAP value": -0.00050223684573355,
+        "contribution direction": "decreases predicted default risk"
+    },
+    {
+        "feature": "cat__OCCUPATION_TYPE_Core staff",
+        "feature value": 0.0,
+        "SHAP value": 0.0005019674124285291,
+        "contribution direction": "increases predicted default risk"
+    },
+    {
+        "feature": "num__ELEVATORS_MEDI",
+        "feature value": -0.3657293219658733,
+        "SHAP value": 0.00048409713890783175,
+        "contribution direction": "increases predicted default risk"
+    },
+    {
+        "feature": "cat__ORGANIZATION_TYPE_Self-employed",
+        "feature value": 0.0,
+        "SHAP value": -0.0004414039798563752,
+        "contribution direction": "decreases predicted default risk"
+    },
+    {
+        "feature": "cat__NAME_HOUSING_TYPE_With parents",
+        "feature value": 0.0,
+        "SHAP value": -0.0004209369719781828,
+        "contribution direction": "decreases predicted default risk"
+    },
+    {
+        "feature": "num__FLAG_DOCUMENT_8",
+        "feature value": 3.35950454510678,
+        "SHAP value": 0.0003958411697790221,
+        "contribution direction": "increases predicted default risk"
+    },
+    {
+        "feature": "cat__ORGANIZATION_TYPE_Business Entity Type 2",
+        "feature value": 0.0,
+        "SHAP value": -0.00037987756955964476,
+        "contribution direction": "decreases predicted default risk"
+    },
+    {
+        "feature": "num__ELEVATORS_AVG",
+        "feature value": -0.36883399081861584,
+        "SHAP value": 0.00036651523478877033,
+        "contribution direction": "increases predicted default risk"
+    },
+    {
+        "feature": "num__FLOORSMIN_AVG",
+        "feature value": -0.08081693377173478,
+        "SHAP value": -0.0003507226354211315,
+        "contribution direction": "decreases predicted default risk"
+    },
+    {
+        "feature": "num__NONLIVINGAPARTMENTS_MODE",
+        "feature value": -0.09537559411434071,
+        "SHAP value": -0.00034774571266769206,
+        "contribution direction": "decreases predicted default risk"
+    },
+    {
+        "feature": "num__AMT_REQ_CREDIT_BUREAU_YEAR",
+        "feature value": 0.1268605461209869,
+        "SHAP value": -0.00033387659736651583,
+        "contribution direction": "decreases predicted default risk"
+    },
+    {
+        "feature": "num__LIVE_CITY_NOT_WORK_CITY",
+        "feature value": -0.4690925371915484,
+        "SHAP value": -0.00032365081489519514,
+        "contribution direction": "decreases predicted default risk"
+    },
+    {
+        "feature": "num__ENTRANCES_MEDI",
+        "feature value": -0.0798020147926897,
+        "SHAP value": -0.00029627859508898625,
+        "contribution direction": "decreases predicted default risk"
+    },
+    {
+        "feature": "cat__FLAG_OWN_REALTY_Y",
+        "feature value": 1.0,
+        "SHAP value": -0.00027289941395502694,
+        "contribution direction": "decreases predicted default risk"
+    },
+    {
+        "feature": "cat__NAME_TYPE_SUITE_Unaccompanied",
+        "feature value": 0.0,
+        "SHAP value": -0.00027128407793788244,
+        "contribution direction": "decreases predicted default risk"
+    },
+    {
+        "feature": "cat__ORGANIZATION_TYPE_Construction",
+        "feature value": 0.0,
+        "SHAP value": -0.00025341180273287615,
+        "contribution direction": "decreases predicted default risk"
+    },
+    {
+        "feature": "cat__ORGANIZATION_TYPE_Government",
+        "feature value": 0.0,
+        "SHAP value": 0.00024246738003481718,
+        "contribution direction": "increases predicted default risk"
+    },
+    {
+        "feature": "cat__OCCUPATION_TYPE_Managers",
+        "feature value": 0.0,
+        "SHAP value": 0.00023726561962403214,
+        "contribution direction": "increases predicted default risk"
+    },
+    {
+        "feature": "cat__WEEKDAY_APPR_PROCESS_START_FRIDAY",
+        "feature value": 0.0,
+        "SHAP value": -0.0002247152574923925,
+        "contribution direction": "decreases predicted default risk"
+    },
+    {
+        "feature": "num__NONLIVINGAPARTMENTS_MEDI",
+        "feature value": -0.09965092088461838,
+        "SHAP value": -0.00021814996010313052,
+        "contribution direction": "decreases predicted default risk"
+    },
+    {
+        "feature": "cat__FLAG_OWN_REALTY_N",
+        "feature value": 0.0,
+        "SHAP value": 0.00020690727131144105,
+        "contribution direction": "increases predicted default risk"
+    },
+    {
+        "feature": "num__FLOORSMIN_MEDI",
+        "feature value": -0.0796799589073044,
+        "SHAP value": -0.0001956556838075204,
+        "contribution direction": "decreases predicted default risk"
+    },
+    {
+        "feature": "num__BASEMENTAREA_MODE",
+        "feature value": -0.09873559978136912,
+        "SHAP value": 0.00018183686863801408,
+        "contribution direction": "increases predicted default risk"
+    },
+    {
+        "feature": "num__FLOORSMAX_AVG",
+        "feature value": -0.2803519806169977,
+        "SHAP value": 0.00017811209751063148,
+        "contribution direction": "increases predicted default risk"
+    },
+    {
+        "feature": "num__FLAG_PHONE",
+        "feature value": -0.6250668443683002,
+        "SHAP value": -0.00016491413129577495,
+        "contribution direction": "decreases predicted default risk"
+    },
+    {
+        "feature": "cat__OCCUPATION_TYPE_Drivers",
+        "feature value": 0.0,
+        "SHAP value": -0.000151988618838426,
+        "contribution direction": "decreases predicted default risk"
+    },
+    {
+        "feature": "cat__WEEKDAY_APPR_PROCESS_START_SATURDAY",
+        "feature value": 0.0,
+        "SHAP value": 0.0001436284508772899,
+        "contribution direction": "increases predicted default risk"
+    },
+    {
+        "feature": "cat__WALLSMATERIAL_MODE_Block",
+        "feature value": 0.0,
+        "SHAP value": -0.00014283995005835023,
+        "contribution direction": "decreases predicted default risk"
+    },
+    {
+        "feature": "num__ELEVATORS_MODE",
+        "feature value": -0.3562060135311026,
+        "SHAP value": 0.00013947877206336133,
+        "contribution direction": "increases predicted default risk"
+    },
+    {
+        "feature": "cat__OCCUPATION_TYPE_Sales staff",
+        "feature value": 0.0,
+        "SHAP value": -0.00013743976500982802,
+        "contribution direction": "decreases predicted default risk"
+    },
+    {
+        "feature": "cat__NAME_FAMILY_STATUS_Civil marriage",
+        "feature value": 0.0,
+        "SHAP value": -0.000120871049736581,
+        "contribution direction": "decreases predicted default risk"
+    },
+    {
+        "feature": "cat__NAME_EDUCATION_TYPE_Lower secondary",
+        "feature value": 0.0,
+        "SHAP value": -0.00011663571737201665,
+        "contribution direction": "decreases predicted default risk"
+    },
+    {
+        "feature": "cat__WEEKDAY_APPR_PROCESS_START_TUESDAY",
+        "feature value": 0.0,
+        "SHAP value": -0.00010796601020412536,
+        "contribution direction": "decreases predicted default risk"
+    },
+    {
+        "feature": "cat__NAME_HOUSING_TYPE_Rented apartment",
+        "feature value": 0.0,
+        "SHAP value": -8.28772415720843e-05,
+        "contribution direction": "decreases predicted default risk"
+    },
+    {
+        "feature": "cat__NAME_HOUSING_TYPE_Municipal apartment",
+        "feature value": 0.0,
+        "SHAP value": -8.032193098281029e-05,
+        "contribution direction": "decreases predicted default risk"
+    },
+    {
+        "feature": "num__LIVE_REGION_NOT_WORK_REGION",
+        "feature value": -0.2072233291551069,
+        "SHAP value": -7.705700909133598e-05,
+        "contribution direction": "decreases predicted default risk"
+    },
+    {
+        "feature": "cat__OCCUPATION_TYPE_Accountants",
+        "feature value": 0.0,
+        "SHAP value": 7.233219666679018e-05,
+        "contribution direction": "increases predicted default risk"
+    },
+    {
+        "feature": "num__FLAG_DOCUMENT_6",
+        "feature value": -0.3100817242515496,
+        "SHAP value": -7.130602324030459e-05,
+        "contribution direction": "decreases predicted default risk"
+    },
+    {
+        "feature": "cat__OCCUPATION_TYPE_Low-skill Laborers",
+        "feature value": 0.0,
+        "SHAP value": -7.062744871539408e-05,
+        "contribution direction": "decreases predicted default risk"
+    },
+    {
+        "feature": "cat__NAME_FAMILY_STATUS_Separated",
+        "feature value": 0.0,
+        "SHAP value": -6.919421629849298e-05,
+        "contribution direction": "decreases predicted default risk"
+    },
+    {
+        "feature": "cat__FONDKAPREMONT_MODE_org spec account",
+        "feature value": 0.0,
+        "SHAP value": -6.481868795014756e-05,
+        "contribution direction": "decreases predicted default risk"
+    },
+    {
+        "feature": "num__LIVINGAPARTMENTS_MEDI",
+        "feature value": -0.15138362150227103,
+        "SHAP value": -6.374273110332538e-05,
+        "contribution direction": "decreases predicted default risk"
+    },
+    {
+        "feature": "cat__ORGANIZATION_TYPE_Industry: type 3",
+        "feature value": 0.0,
+        "SHAP value": -6.258839195332195e-05,
+        "contribution direction": "decreases predicted default risk"
+    },
+    {
+        "feature": "cat__FONDKAPREMONT_MODE_reg oper spec account",
+        "feature value": 0.0,
+        "SHAP value": -6.243676878107309e-05,
+        "contribution direction": "decreases predicted default risk"
+    },
+    {
+        "feature": "cat__ORGANIZATION_TYPE_School",
+        "feature value": 0.0,
+        "SHAP value": 6.063645373539431e-05,
+        "contribution direction": "increases predicted default risk"
+    },
+    {
+        "feature": "cat__OCCUPATION_TYPE_High skill tech staff",
+        "feature value": 0.0,
+        "SHAP value": -5.939728500160413e-05,
+        "contribution direction": "decreases predicted default risk"
+    },
+    {
+        "feature": "num__AMT_REQ_CREDIT_BUREAU_QRT",
+        "feature value": 1.3378890400752403,
+        "SHAP value": -5.921832286260953e-05,
+        "contribution direction": "decreases predicted default risk"
+    },
+    {
+        "feature": "cat__ORGANIZATION_TYPE_Transport: type 3",
+        "feature value": 0.0,
+        "SHAP value": -5.4471129578594966e-05,
+        "contribution direction": "decreases predicted default risk"
+    },
+    {
+        "feature": "cat__OCCUPATION_TYPE_Medicine staff",
+        "feature value": 0.0,
+        "SHAP value": 4.98280059223624e-05,
+        "contribution direction": "increases predicted default risk"
+    },
+    {
+        "feature": "cat__ORGANIZATION_TYPE_Business Entity Type 1",
+        "feature value": 0.0,
+        "SHAP value": -4.658268459686042e-05,
+        "contribution direction": "decreases predicted default risk"
+    },
+    {
+        "feature": "cat__FONDKAPREMONT_MODE_reg oper account",
+        "feature value": 1.0,
+        "SHAP value": -4.374870944621443e-05,
+        "contribution direction": "decreases predicted default risk"
+    },
+    {
+        "feature": "cat__WEEKDAY_APPR_PROCESS_START_MONDAY",
+        "feature value": 1.0,
+        "SHAP value": -4.253997995633826e-05,
+        "contribution direction": "decreases predicted default risk"
+    },
+    {
+        "feature": "cat__HOUSETYPE_MODE_block of flats",
+        "feature value": 1.0,
+        "SHAP value": -4.234497096160271e-05,
+        "contribution direction": "decreases predicted default risk"
+    },
+    {
+        "feature": "cat__ORGANIZATION_TYPE_Other",
+        "feature value": 0.0,
+        "SHAP value": -4.126631178255204e-05,
+        "contribution direction": "decreases predicted default risk"
+    },
+    {
+        "feature": "cat__ORGANIZATION_TYPE_Police",
+        "feature value": 0.0,
+        "SHAP value": 3.994478601282838e-05,
+        "contribution direction": "increases predicted default risk"
+    },
+    {
+        "feature": "num__COMMONAREA_MEDI",
+        "feature value": -0.1660648516405443,
+        "SHAP value": 3.394422952212994e-05,
+        "contribution direction": "increases predicted default risk"
+    },
+    {
+        "feature": "cat__NAME_TYPE_SUITE_Children",
+        "feature value": 0.0,
+        "SHAP value": -3.203506424323381e-05,
+        "contribution direction": "decreases predicted default risk"
+    },
+    {
+        "feature": "cat__NAME_HOUSING_TYPE_Office apartment",
+        "feature value": 0.0,
+        "SHAP value": -2.8301229236851736e-05,
+        "contribution direction": "decreases predicted default risk"
+    },
+    {
+        "feature": "num__AMT_REQ_CREDIT_BUREAU_WEEK",
+        "feature value": -0.15489343589663268,
+        "SHAP value": -2.8298920715474787e-05,
+        "contribution direction": "decreases predicted default risk"
+    },
+    {
+        "feature": "num__FLAG_EMAIL",
+        "feature value": -0.24524734647138677,
+        "SHAP value": -2.5957989143839795e-05,
+        "contribution direction": "decreases predicted default risk"
+    },
+    {
+        "feature": "cat__ORGANIZATION_TYPE_Kindergarten",
+        "feature value": 0.0,
+        "SHAP value": 2.57347458817114e-05,
+        "contribution direction": "increases predicted default risk"
+    },
+    {
+        "feature": "num__FLAG_DOCUMENT_5",
+        "feature value": -0.12387593564032036,
+        "SHAP value": -2.4508986245263046e-05,
+        "contribution direction": "decreases predicted default risk"
+    },
+    {
+        "feature": "num__REG_REGION_NOT_LIVE_REGION",
+        "feature value": -0.12348632445047805,
+        "SHAP value": 2.2513358101177603e-05,
+        "contribution direction": "increases predicted default risk"
+    },
+    {
+        "feature": "cat__ORGANIZATION_TYPE_Trade: type 3",
+        "feature value": 0.0,
+        "SHAP value": -2.134806007635816e-05,
+        "contribution direction": "decreases predicted default risk"
+    },
+    {
+        "feature": "cat__ORGANIZATION_TYPE_Trade: type 7",
+        "feature value": 0.0,
+        "SHAP value": -2.0207961522161836e-05,
+        "contribution direction": "decreases predicted default risk"
+    },
+    {
+        "feature": "cat__OCCUPATION_TYPE_Cleaning staff",
+        "feature value": 0.0,
+        "SHAP value": 1.6223331835323983e-05,
+        "contribution direction": "increases predicted default risk"
+    },
+    {
+        "feature": "cat__ORGANIZATION_TYPE_Agriculture",
+        "feature value": 0.0,
+        "SHAP value": -1.5795105022220846e-05,
+        "contribution direction": "decreases predicted default risk"
+    },
+    {
+        "feature": "cat__NAME_EDUCATION_TYPE_Incomplete higher",
+        "feature value": 0.0,
+        "SHAP value": -1.3876359919457642e-05,
+        "contribution direction": "decreases predicted default risk"
+    },
+    {
+        "feature": "cat__ORGANIZATION_TYPE_Military",
+        "feature value": 0.0,
+        "SHAP value": 1.3663692787421175e-05,
+        "contribution direction": "increases predicted default risk"
+    },
+    {
+        "feature": "cat__ORGANIZATION_TYPE_Industry: type 9",
+        "feature value": 0.0,
+        "SHAP value": 1.3087153068592215e-05,
+        "contribution direction": "increases predicted default risk"
+    },
+    {
+        "feature": "cat__ORGANIZATION_TYPE_Trade: type 2",
+        "feature value": 0.0,
+        "SHAP value": 1.2354561571321667e-05,
+        "contribution direction": "increases predicted default risk"
+    },
+    {
+        "feature": "num__FLAG_DOCUMENT_18",
+        "feature value": -0.09057988892391391,
+        "SHAP value": 1.1904387911019593e-05,
+        "contribution direction": "increases predicted default risk"
+    },
+    {
+        "feature": "cat__NAME_TYPE_SUITE_Family",
+        "feature value": 1.0,
+        "SHAP value": -1.1829482731110534e-05,
+        "contribution direction": "decreases predicted default risk"
+    },
+    {
+        "feature": "cat__FONDKAPREMONT_MODE_not specified",
+        "feature value": 0.0,
+        "SHAP value": 1.1586766283576616e-05,
+        "contribution direction": "increases predicted default risk"
+    },
+    {
+        "feature": "cat__OCCUPATION_TYPE_Security staff",
+        "feature value": 0.0,
+        "SHAP value": 1.1462385714872224e-05,
+        "contribution direction": "increases predicted default risk"
+    },
+    {
+        "feature": "num__DAYS_REGISTRATION",
+        "feature value": 0.5996751258044203,
+        "SHAP value": -1.1089865145893375e-05,
+        "contribution direction": "decreases predicted default risk"
+    },
+    {
+        "feature": "cat__EMERGENCYSTATE_MODE_No",
+        "feature value": 1.0,
+        "SHAP value": -1.1082761450831172e-05,
+        "contribution direction": "decreases predicted default risk"
+    },
+    {
+        "feature": "num__FLAG_DOCUMENT_16",
+        "feature value": -0.10060524802741164,
+        "SHAP value": 1.07617716462719e-05,
+        "contribution direction": "increases predicted default risk"
+    },
+    {
+        "feature": "cat__ORGANIZATION_TYPE_Housing",
+        "feature value": 0.0,
+        "SHAP value": -9.8560942038813e-06,
+        "contribution direction": "decreases predicted default risk"
+    },
+    {
+        "feature": "cat__ORGANIZATION_TYPE_Medicine",
+        "feature value": 0.0,
+        "SHAP value": 9.25580389342864e-06,
+        "contribution direction": "increases predicted default risk"
+    },
+    {
+        "feature": "cat__ORGANIZATION_TYPE_Transport: type 4",
+        "feature value": 1.0,
+        "SHAP value": 9.07753527387063e-06,
+        "contribution direction": "increases predicted default risk"
+    },
+    {
+        "feature": "cat__NAME_TYPE_SUITE_Spouse, partner",
+        "feature value": 0.0,
+        "SHAP value": -9.030452525252682e-06,
+        "contribution direction": "decreases predicted default risk"
+    },
+    {
+        "feature": "cat__ORGANIZATION_TYPE_Trade: type 6",
+        "feature value": 0.0,
+        "SHAP value": -8.178752382971186e-06,
+        "contribution direction": "decreases predicted default risk"
+    },
+    {
+        "feature": "cat__ORGANIZATION_TYPE_Transport: type 2",
+        "feature value": 0.0,
+        "SHAP value": 7.984052167285676e-06,
+        "contribution direction": "increases predicted default risk"
+    },
+    {
+        "feature": "cat__OCCUPATION_TYPE_Cooking staff",
+        "feature value": 0.0,
+        "SHAP value": -7.747254915513334e-06,
+        "contribution direction": "decreases predicted default risk"
+    },
+    {
+        "feature": "cat__EMERGENCYSTATE_MODE_Yes",
+        "feature value": 0.0,
+        "SHAP value": -6.536884432213667e-06,
+        "contribution direction": "decreases predicted default risk"
+    },
+    {
+        "feature": "cat__NAME_FAMILY_STATUS_Widow",
+        "feature value": 0.0,
+        "SHAP value": -5.74981413472692e-06,
+        "contribution direction": "decreases predicted default risk"
+    },
+    {
+        "feature": "cat__ORGANIZATION_TYPE_Postal",
+        "feature value": 0.0,
+        "SHAP value": 5.694928498263682e-06,
+        "contribution direction": "increases predicted default risk"
+    },
+    {
+        "feature": "cat__WALLSMATERIAL_MODE_Mixed",
+        "feature value": 0.0,
+        "SHAP value": 5.464939584943882e-06,
+        "contribution direction": "increases predicted default risk"
+    },
+    {
+        "feature": "num__AMT_REQ_CREDIT_BUREAU_DAY",
+        "feature value": -0.057891430859702636,
+        "SHAP value": -5.292740208051576e-06,
+        "contribution direction": "decreases predicted default risk"
+    },
+    {
+        "feature": "cat__ORGANIZATION_TYPE_Bank",
+        "feature value": 0.0,
+        "SHAP value": 5.249606984942782e-06,
+        "contribution direction": "increases predicted default risk"
+    },
+    {
+        "feature": "cat__WEEKDAY_APPR_PROCESS_START_SUNDAY",
+        "feature value": 0.0,
+        "SHAP value": -4.828362771774886e-06,
+        "contribution direction": "decreases predicted default risk"
+    },
+    {
+        "feature": "num__REG_REGION_NOT_WORK_REGION",
+        "feature value": -0.23218630558025183,
+        "SHAP value": -4.793630794835813e-06,
+        "contribution direction": "decreases predicted default risk"
+    },
+    {
+        "feature": "cat__HOUSETYPE_MODE_specific housing",
+        "feature value": 0.0,
+        "SHAP value": -4.743849670162918e-06,
+        "contribution direction": "decreases predicted default risk"
+    },
+    {
+        "feature": "num__FLAG_DOCUMENT_11",
+        "feature value": -0.06229550376548804,
+        "SHAP value": 4.310422724690406e-06,
+        "contribution direction": "increases predicted default risk"
+    },
+    {
+        "feature": "cat__ORGANIZATION_TYPE_Industry: type 1",
+        "feature value": 0.0,
+        "SHAP value": -4.145243048066843e-06,
+        "contribution direction": "decreases predicted default risk"
+    },
+    {
+        "feature": "cat__ORGANIZATION_TYPE_Security",
+        "feature value": 0.0,
+        "SHAP value": 3.85156441040011e-06,
+        "contribution direction": "increases predicted default risk"
+    },
+    {
+        "feature": "cat__OCCUPATION_TYPE_Secretaries",
+        "feature value": 0.0,
+        "SHAP value": -3.7863192561379563e-06,
+        "contribution direction": "decreases predicted default risk"
+    },
+    {
+        "feature": "cat__ORGANIZATION_TYPE_Restaurant",
+        "feature value": 0.0,
+        "SHAP value": 3.7017745149993874e-06,
+        "contribution direction": "increases predicted default risk"
+    },
+    {
+        "feature": "num__FLAG_DOCUMENT_13",
+        "feature value": -0.05825358874515986,
+        "SHAP value": 3.295711488533834e-06,
+        "contribution direction": "increases predicted default risk"
+    },
+    {
+        "feature": "cat__OCCUPATION_TYPE_HR staff",
+        "feature value": 0.0,
+        "SHAP value": -3.1005159913571623e-06,
+        "contribution direction": "decreases predicted default risk"
+    },
+    {
+        "feature": "cat__ORGANIZATION_TYPE_University",
+        "feature value": 0.0,
+        "SHAP value": -3.0962345141786017e-06,
+        "contribution direction": "decreases predicted default risk"
+    },
+    {
+        "feature": "cat__ORGANIZATION_TYPE_Services",
+        "feature value": 0.0,
+        "SHAP value": 1.9597755888418968e-06,
+        "contribution direction": "increases predicted default risk"
+    },
+    {
+        "feature": "cat__ORGANIZATION_TYPE_Electricity",
+        "feature value": 0.0,
+        "SHAP value": -1.8898028294321777e-06,
+        "contribution direction": "decreases predicted default risk"
+    },
+    {
+        "feature": "num__AMT_REQ_CREDIT_BUREAU_HOUR",
+        "feature value": -0.07048614745644435,
+        "SHAP value": -1.7387005613777413e-06,
+        "contribution direction": "decreases predicted default risk"
+    },
+    {
+        "feature": "cat__NAME_TYPE_SUITE_Other_B",
+        "feature value": 0.0,
+        "SHAP value": -1.6858136155972018e-06,
+        "contribution direction": "decreases predicted default risk"
+    },
+    {
+        "feature": "cat__ORGANIZATION_TYPE_Hotel",
+        "feature value": 0.0,
+        "SHAP value": 1.65150420625174e-06,
+        "contribution direction": "increases predicted default risk"
+    },
+    {
+        "feature": "cat__NAME_HOUSING_TYPE_Co-op apartment",
+        "feature value": 0.0,
+        "SHAP value": 1.6384911660940977e-06,
+        "contribution direction": "increases predicted default risk"
+    },
+    {
+        "feature": "cat__ORGANIZATION_TYPE_Security Ministries",
+        "feature value": 0.0,
+        "SHAP value": 1.4736076363360653e-06,
+        "contribution direction": "increases predicted default risk"
+    },
+    {
+        "feature": "cat__WALLSMATERIAL_MODE_Wooden",
+        "feature value": 0.0,
+        "SHAP value": 1.4552686417957234e-06,
+        "contribution direction": "increases predicted default risk"
+    },
+    {
+        "feature": "cat__ORGANIZATION_TYPE_Advertising",
+        "feature value": 0.0,
+        "SHAP value": 1.3981009104195938e-06,
+        "contribution direction": "increases predicted default risk"
+    },
+    {
+        "feature": "num__FLAG_DOCUMENT_9",
+        "feature value": -0.0621638478511603,
+        "SHAP value": 1.301585784866004e-06,
+        "contribution direction": "increases predicted default risk"
+    },
+    {
+        "feature": "num__FLAG_DOCUMENT_14",
+        "feature value": -0.054404581136543874,
+        "SHAP value": 1.210354592816269e-06,
+        "contribution direction": "increases predicted default risk"
+    },
+    {
+        "feature": "cat__ORGANIZATION_TYPE_Industry: type 11",
+        "feature value": 0.0,
+        "SHAP value": 9.790961595711694e-07,
+        "contribution direction": "increases predicted default risk"
+    },
+    {
+        "feature": "cat__OCCUPATION_TYPE_Private service staff",
+        "feature value": 0.0,
+        "SHAP value": 6.83790083423905e-07,
+        "contribution direction": "increases predicted default risk"
+    },
+    {
+        "feature": "cat__WALLSMATERIAL_MODE_Others",
+        "feature value": 0.0,
+        "SHAP value": 6.113635606694237e-07,
+        "contribution direction": "increases predicted default risk"
+    },
+    {
+        "feature": "cat__WALLSMATERIAL_MODE_Monolithic",
+        "feature value": 0.0,
+        "SHAP value": -4.858413840594476e-07,
+        "contribution direction": "decreases predicted default risk"
+    },
+    {
+        "feature": "cat__HOUSETYPE_MODE_terraced house",
+        "feature value": 0.0,
+        "SHAP value": 3.8861083511829153e-07,
+        "contribution direction": "increases predicted default risk"
+    },
+    {
+        "feature": "cat__OCCUPATION_TYPE_Waiters/barmen staff",
+        "feature value": 0.0,
+        "SHAP value": 3.4494859574782873e-07,
+        "contribution direction": "increases predicted default risk"
+    },
+    {
+        "feature": "cat__OCCUPATION_TYPE_Realty agents",
+        "feature value": 0.0,
+        "SHAP value": -3.1929684120926773e-07,
+        "contribution direction": "decreases predicted default risk"
+    },
+    {
+        "feature": "cat__NAME_TYPE_SUITE_Other_A",
+        "feature value": 0.0,
+        "SHAP value": -3.1189137015960395e-07,
+        "contribution direction": "decreases predicted default risk"
+    },
+    {
+        "feature": "cat__ORGANIZATION_TYPE_Industry: type 4",
+        "feature value": 0.0,
+        "SHAP value": 2.9293189427162515e-07,
+        "contribution direction": "increases predicted default risk"
+    },
+    {
+        "feature": "cat__ORGANIZATION_TYPE_Mobile",
+        "feature value": 0.0,
+        "SHAP value": 2.3544994097911974e-07,
+        "contribution direction": "increases predicted default risk"
+    },
+    {
+        "feature": "cat__ORGANIZATION_TYPE_Industry: type 10",
+        "feature value": 0.0,
+        "SHAP value": 2.3239102661519836e-07,
+        "contribution direction": "increases predicted default risk"
+    },
+    {
+        "feature": "cat__ORGANIZATION_TYPE_Industry: type 7",
+        "feature value": 0.0,
+        "SHAP value": 2.313053014130327e-07,
+        "contribution direction": "increases predicted default risk"
+    },
+    {
+        "feature": "num__FLAG_CONT_MOBILE",
+        "feature value": 0.04337650494642582,
+        "SHAP value": -2.2049044384516935e-07,
+        "contribution direction": "decreases predicted default risk"
+    },
+    {
+        "feature": "cat__ORGANIZATION_TYPE_Telecom",
+        "feature value": 0.0,
+        "SHAP value": 1.6254291015133558e-07,
+        "contribution direction": "increases predicted default risk"
+    },
+    {
+        "feature": "num__FLAG_DOCUMENT_15",
+        "feature value": -0.03464949750708748,
+        "SHAP value": 0.0,
+        "contribution direction": "increases predicted default risk"
+    },
+    {
+        "feature": "num__FLAG_MOBIL",
+        "feature value": 0.0020161659112891005,
+        "SHAP value": 0.0,
+        "contribution direction": "increases predicted default risk"
+    },
+    {
+        "feature": "num__FLAG_DOCUMENT_2",
+        "feature value": -0.00668700175500597,
+        "SHAP value": 0.0,
+        "contribution direction": "increases predicted default risk"
+    },
+    {
+        "feature": "num__FLAG_DOCUMENT_4",
+        "feature value": -0.009457060016818139,
+        "SHAP value": 0.0,
+        "contribution direction": "increases predicted default risk"
+    },
+    {
+        "feature": "num__FLAG_DOCUMENT_7",
+        "feature value": -0.01367555334545125,
+        "SHAP value": 0.0,
+        "contribution direction": "increases predicted default risk"
+    },
+    {
+        "feature": "cat__NAME_TYPE_SUITE_Group of people",
+        "feature value": 0.0,
+        "SHAP value": 0.0,
+        "contribution direction": "increases predicted default risk"
+    },
+    {
+        "feature": "cat__CODE_GENDER_XNA",
+        "feature value": 0.0,
+        "SHAP value": 0.0,
+        "contribution direction": "increases predicted default risk"
+    },
+    {
+        "feature": "num__FLAG_DOCUMENT_10",
+        "feature value": -0.00403235640947538,
+        "SHAP value": 0.0,
+        "contribution direction": "increases predicted default risk"
+    },
+    {
+        "feature": "num__FLAG_DOCUMENT_12",
+        "feature value": -0.002016165911280483,
+        "SHAP value": 0.0,
+        "contribution direction": "increases predicted default risk"
+    },
+    {
+        "feature": "num__FLAG_DOCUMENT_19",
+        "feature value": -0.024700369913863054,
+        "SHAP value": 0.0,
+        "contribution direction": "increases predicted default risk"
+    },
+    {
+        "feature": "num__FLAG_DOCUMENT_17",
+        "feature value": -0.015748679788325084,
+        "SHAP value": 0.0,
+        "contribution direction": "increases predicted default risk"
+    },
+    {
+        "feature": "num__FLAG_DOCUMENT_21",
+        "feature value": -0.01792291617936326,
+        "SHAP value": 0.0,
+        "contribution direction": "increases predicted default risk"
+    },
+    {
+        "feature": "num__FLAG_DOCUMENT_20",
+        "feature value": -0.022456688134952853,
+        "SHAP value": 0.0,
+        "contribution direction": "increases predicted default risk"
+    },
+    {
+        "feature": "cat__NAME_EDUCATION_TYPE_Academic degree",
+        "feature value": 0.0,
+        "SHAP value": 0.0,
+        "contribution direction": "increases predicted default risk"
+    },
+    {
+        "feature": "cat__ORGANIZATION_TYPE_Cleaning",
+        "feature value": 0.0,
+        "SHAP value": 0.0,
+        "contribution direction": "increases predicted default risk"
+    },
+    {
+        "feature": "cat__OCCUPATION_TYPE_IT staff",
+        "feature value": 0.0,
+        "SHAP value": 0.0,
+        "contribution direction": "increases predicted default risk"
+    },
+    {
+        "feature": "cat__NAME_INCOME_TYPE_Maternity leave",
+        "feature value": 0.0,
+        "SHAP value": 0.0,
+        "contribution direction": "increases predicted default risk"
+    },
+    {
+        "feature": "cat__NAME_INCOME_TYPE_Businessman",
+        "feature value": 0.0,
+        "SHAP value": 0.0,
+        "contribution direction": "increases predicted default risk"
+    },
+    {
+        "feature": "cat__NAME_INCOME_TYPE_Unemployed",
+        "feature value": 0.0,
+        "SHAP value": 0.0,
+        "contribution direction": "increases predicted default risk"
+    },
+    {
+        "feature": "cat__NAME_INCOME_TYPE_Student",
+        "feature value": 0.0,
+        "SHAP value": 0.0,
+        "contribution direction": "increases predicted default risk"
+    },
+    {
+        "feature": "cat__NAME_FAMILY_STATUS_Unknown",
+        "feature value": 0.0,
+        "SHAP value": 0.0,
+        "contribution direction": "increases predicted default risk"
+    },
+    {
+        "feature": "cat__ORGANIZATION_TYPE_Culture",
+        "feature value": 0.0,
+        "SHAP value": 0.0,
+        "contribution direction": "increases predicted default risk"
+    },
+    {
+        "feature": "cat__ORGANIZATION_TYPE_Realtor",
+        "feature value": 0.0,
+        "SHAP value": 0.0,
+        "contribution direction": "increases predicted default risk"
+    },
+    {
+        "feature": "cat__ORGANIZATION_TYPE_Legal Services",
+        "feature value": 0.0,
+        "SHAP value": 0.0,
+        "contribution direction": "increases predicted default risk"
+    },
+    {
+        "feature": "cat__ORGANIZATION_TYPE_Religion",
+        "feature value": 0.0,
+        "SHAP value": 0.0,
+        "contribution direction": "increases predicted default risk"
+    },
+    {
+        "feature": "cat__ORGANIZATION_TYPE_Industry: type 13",
+        "feature value": 0.0,
+        "SHAP value": 0.0,
+        "contribution direction": "increases predicted default risk"
+    },
+    {
+        "feature": "cat__ORGANIZATION_TYPE_Industry: type 5",
+        "feature value": 0.0,
+        "SHAP value": 0.0,
+        "contribution direction": "increases predicted default risk"
+    },
+    {
+        "feature": "cat__ORGANIZATION_TYPE_Industry: type 6",
+        "feature value": 0.0,
+        "SHAP value": 0.0,
+        "contribution direction": "increases predicted default risk"
+    },
+    {
+        "feature": "cat__ORGANIZATION_TYPE_Industry: type 8",
+        "feature value": 0.0,
+        "SHAP value": 0.0,
+        "contribution direction": "increases predicted default risk"
+    },
+    {
+        "feature": "cat__ORGANIZATION_TYPE_Industry: type 12",
+        "feature value": 0.0,
+        "SHAP value": 0.0,
+        "contribution direction": "increases predicted default risk"
+    },
+    {
+        "feature": "cat__ORGANIZATION_TYPE_Emergency",
+        "feature value": 0.0,
+        "SHAP value": 0.0,
+        "contribution direction": "increases predicted default risk"
+    },
+    {
+        "feature": "cat__ORGANIZATION_TYPE_Industry: type 2",
+        "feature value": 0.0,
+        "SHAP value": 0.0,
+        "contribution direction": "increases predicted default risk"
+    },
+    {
+        "feature": "cat__ORGANIZATION_TYPE_Insurance",
+        "feature value": 0.0,
+        "SHAP value": 0.0,
+        "contribution direction": "increases predicted default risk"
+    },
+    {
+        "feature": "cat__ORGANIZATION_TYPE_Transport: type 1",
+        "feature value": 0.0,
+        "SHAP value": 0.0,
+        "contribution direction": "increases predicted default risk"
+    },
+    {
+        "feature": "cat__ORGANIZATION_TYPE_Trade: type 1",
+        "feature value": 0.0,
+        "SHAP value": 0.0,
+        "contribution direction": "increases predicted default risk"
+    },
+    {
+        "feature": "cat__ORGANIZATION_TYPE_Trade: type 4",
+        "feature value": 0.0,
+        "SHAP value": 0.0,
+        "contribution direction": "increases predicted default risk"
+    },
+    {
+        "feature": "cat__ORGANIZATION_TYPE_Trade: type 5",
+        "feature value": 0.0,
+        "SHAP value": 0.0,
+        "contribution direction": "increases predicted default risk"
+    }
+]

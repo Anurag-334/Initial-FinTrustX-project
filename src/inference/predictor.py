@@ -138,20 +138,14 @@ class Predictor:
         """
         Convert probability into a risk category.
         """
-
-        if probability >= 0.80:
-            return "Very High"
-
-        elif probability >= 0.60:
-            return "High"
-
-        elif probability >= 0.40:
-            return "Medium"
-
-        elif probability >= 0.20:
-            return "Low"
-
-        return "Very Low"
+        if probability < 0.20:
+            return "Low Risk"
+        elif probability < 0.40:
+            return "Moderate Risk"
+        elif probability < 0.60:
+            return "High Risk"
+        else:
+            return "Very High Risk"
 
     def health_check(self) -> bool:
         """

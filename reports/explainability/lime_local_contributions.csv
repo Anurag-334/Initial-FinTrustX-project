@@ -1,0 +1,11 @@
+feature condition,contribution weight,contribution direction
+num__EXT_SOURCE_1 <= 0.01,0.05171779062818636,increases selected-class score
+cat__ORGANIZATION_TYPE_Industry: type 12 <= 0.00,-0.04621361685124893,decreases selected-class score
+num__FLAG_DOCUMENT_10 <= -0.00,-0.04571349609755967,decreases selected-class score
+cat__ORGANIZATION_TYPE_Industry: type 10 <= 0.00,-0.03764864176227088,decreases selected-class score
+cat__ORGANIZATION_TYPE_Religion <= 0.00,-0.026788798999515747,decreases selected-class score
+cat__ORGANIZATION_TYPE_Trade: type 5 <= 0.00,-0.02514393386366546,decreases selected-class score
+cat__ORGANIZATION_TYPE_Realtor <= 0.00,0.02167543369425921,increases selected-class score
+num__FLAG_DOCUMENT_4 <= -0.01,-0.021606723660237692,decreases selected-class score
+num__FLAG_DOCUMENT_17 <= -0.02,-0.021418942199080315,decreases selected-class score
+cat__NAME_INCOME_TYPE_Unemployed <= 0.00,-0.02137526249224823,decreases selected-class score

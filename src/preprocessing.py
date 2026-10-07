@@ -22,7 +22,9 @@ Features:
 ===========================================================
 """
 
+import logging
 from pathlib import Path
+from typing import List, Optional, Set, Tuple, Union
 import joblib
 import pandas as pd
 
@@ -36,6 +38,8 @@ from sklearn.preprocessing import (
 
 from src.config import MODEL_DIR
 
+logger = logging.getLogger(__name__)
+
 
 class DataPreprocessor:
 
@@ -48,33 +52,69 @@ class DataPreprocessor:
 
     # -------------------------------------------------
 
-    def detect_features(self, df, target_column="TARGET"):
+    def detect_features(
+        self,
+        df: pd.DataFrame,
+        target_column: Optional[str] = "TARGET",
+        exclude_columns: Optional[Union[List[str], Set[str]]] = None,
+    ) -> Tuple[List[str], List[str]]:
 
         """
-        Automatically detect
-        numerical and categorical columns.
+        Automatically detect numerical and categorical feature columns.
+
+        Excludes target column and identifier columns (e.g., SK_ID_CURR) to
+        prevent data leakage into machine learning models.
+
+        Parameters
+        ----------
+        df : pd.DataFrame
+            Input dataset.
+        target_column : str, optional
+            Name of target variable column (default: "TARGET"). If None or
+            not present in df.columns, no target is dropped.
+        exclude_columns : list or set of str, optional
+            Columns to exclude from features. Defaults to ["SK_ID_CURR"]
+            to ensure applicant ID is never treated as a feature.
+
+        Returns
+        -------
+        Tuple[List[str], List[str]]
+            Tuple containing (numeric_features, categorical_features).
         """
 
-        X = df.drop(columns=[target_column])
+        drop_cols: Set[str] = set()
+
+        if target_column is not None and target_column in df.columns:
+            drop_cols.add(target_column)
+
+        if exclude_columns is None:
+            drop_cols.add("SK_ID_CURR")
+        else:
+            drop_cols.update(exclude_columns)
+            drop_cols.add("SK_ID_CURR")
+
+        feature_cols = [c for c in df.columns if c not in drop_cols]
+        X = df[feature_cols]
 
         self.numeric_features = X.select_dtypes(
             include=["number"]
         ).columns.tolist()
 
         self.categorical_features = X.select_dtypes(
-            include=["object", "string"]
+            include=["object", "string", "category"]
         ).columns.tolist()
 
-        print("=" * 60)
-        print("Feature Detection")
-        print("=" * 60)
-
-        print(f"Numerical : {len(self.numeric_features)}")
-        print(f"Categorical : {len(self.categorical_features)}")
+        logger.info("=" * 60)
+        logger.info("Feature Detection")
+        logger.info("=" * 60)
+        logger.info(f"Numerical : {len(self.numeric_features)}")
+        logger.info(f"Categorical : {len(self.categorical_features)}")
+        if "SK_ID_CURR" in df.columns:
+            logger.info("Excluded applicant ID: SK_ID_CURR")
 
         return (
             self.numeric_features,
-            self.categorical_features
+            self.categorical_features,
         )
 
     # -------------------------------------------------

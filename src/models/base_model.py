@@ -29,12 +29,14 @@ class BaseModel(ABC):
 
     def predict(self, X):
 
-        assert self.model is not None
+        if self.model is None:
+            raise ValueError("Model is not initialized.")
         return self.model.predict(X)
 
     def predict_proba(self, X):
 
-        assert self.model is not None
+        if self.model is None:
+            raise ValueError("Model is not initialized.")
         return self.model.predict_proba(X)[:, 1]
 
     def save(self, path):

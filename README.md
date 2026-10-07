@@ -27,7 +27,7 @@ In consumer credit lending:
 ## 🚀 Key Features
 
 - **Robust Preprocessing & Feature Engineering**: Handles missing values, target encoding, outlier management, aggregation features, and debt-to-income indicators across 245 engineered features.
-- **Multi-Model Benchmark Suite**: Compares Decision Trees, Random Forests, XGBoost, CatBoost, and Deep Neural Networks under identical held-out test conditions.
+- **Full 5-Model Benchmark Suite**: Compares Decision Tree, Random Forest, XGBoost, CatBoost, and Deep Neural Network under identical held-out test conditions.
 - **Imbalance-Aware Evaluation**: Evaluates models primarily on **ROC-AUC** and **Average Precision (PR-AUC)** alongside customized lending business metrics.
 - **Multi-Faceted Explainable AI (XAI)**:
   - **SHAP (SHapley Additive exPlanations)**: Global feature importance, summary beeswarm plots, and local waterfall explanations.
@@ -84,31 +84,37 @@ In consumer credit lending:
 
 Evaluated on the **61,503 held-out test applicants** (245 features, 4,965 actual defaults):
 
-### Standard Performance Comparison
+### Standard Performance Comparison (Sorted by ROC AUC)
 | Model | ROC AUC | Average Precision (PR-AUC) | F1 Score | Recall (Default Capture) | Precision | Balanced Accuracy |
 | :--- | :---: | :---: | :---: | :---: | :---: | :---: |
-| **Random Forest (Champion)** | **0.7382** | **0.2139** | **0.2786** | 0.3186 | **0.2475** | **0.6168** |
+| **CatBoost (Champion)** | **0.7716** | 0.2784 | 0.3705 | 0.6410 | 0.2604 | 0.7189 |
+| **XGBoost** | 0.7712 | **0.2796** | **0.3744** | 0.6466 | **0.2636** | **0.7209** |
+| **Deep Neural Network** | 0.7610 | 0.2603 | 0.3552 | 0.6418 | 0.2458 | 0.7077 |
+| **Random Forest** | 0.7382 | 0.2139 | 0.2786 | 0.3186 | 0.2475 | 0.6168 |
 | **Decision Tree** | 0.6282 | 0.1211 | 0.1901 | **0.6828** | 0.1104 | 0.5999 |
 
-*Note: Baseline empirical default prevalence is **8.07%**. Random Forest achieves a PR-AUC of 0.2139 (>2.6x improvement over random guessing).*
+*Note: Baseline empirical default prevalence is **8.07%**. Gradient boosting models achieve >3.4x improvement over random guessing.*
 
 ### Credit Risk Business Metrics (Threshold = 0.50)
 | Model | True Defaults Captured | False Defaults Flagged | Good Customers Cleared | Defaults Missed | Default Capture Rate |
 | :--- | :---: | :---: | :---: | :---: | :---: |
+| **CatBoost (Champion)** | 3,183 | 9,047 | 47,491 | 1,783 | **64.10%** |
+| **XGBoost** | 3,211 | 8,972 | 47,566 | 1,755 | **64.66%** |
+| **Deep Neural Network** | 3,187 | 9,789 | 46,749 | 1,779 | **64.18%** |
 | **Random Forest** | 1,582 | 4,809 | 51,729 | 3,383 | 31.86% |
 | **Decision Tree** | 3,390 | 27,309 | 29,229 | 1,575 | 68.28% |
 
-### Operational Threshold Sensitivity (Random Forest Champion)
-| Threshold | Precision | Recall (Default Capture) | F1 Score | True Defaults Captured | False Defaults Flagged | Defaults Missed |
-| :---: | :---: | :---: | :---: | :---: | :---: | :---: |
-| `0.10` | 0.0812 | 0.9986 | 0.1502 | 4,958 | 56,091 | 7 |
-| `0.20` | 0.0978 | 0.9404 | 0.1772 | 4,669 | 43,061 | 296 |
-| `0.30` | 0.1363 | 0.7774 | 0.2319 | 3,860 | 24,459 | 1,105 |
-| `0.40` | 0.1857 | 0.5380 | 0.2761 | 2,671 | 11,715 | 2,294 |
-| `0.50` | 0.2475 | 0.3186 | 0.2786 | 1,582 | 4,809 | 3,383 |
-| `0.60` | 0.3045 | 0.1446 | 0.1961 | 718 | 1,640 | 4,247 |
-
-> **Underwriting Insight:** A default threshold of `0.50` misses 3,383 defaults. Lowering the cut-off threshold to `0.30` captures **77.7% of all defaults (3,860 bad loans prevented)** while maintaining reasonable approval volume.
+### Operational Threshold Sensitivity (CatBoost Champion)
+| Threshold | Precision | Recall (Default Capture) | F1 Score | True Defaults Captured | False Defaults Flagged |
+| :---: | :---: | :---: | :---: | :---: | :---: |
+| `0.10` | 0.0810 | 1.0000 | 0.1498 | 4,966 | 0 |
+| `0.20` | 0.0886 | 0.9859 | 0.1626 | 4,896 | 50,369 |
+| `0.30` | 0.1337 | 0.8844 | 0.2323 | 4,392 | 28,450 |
+| `0.40` | 0.1966 | 0.7712 | 0.3134 | 3,830 | 15,647 |
+| `0.50` | 0.2604 | 0.6410 | 0.3705 | 3,183 | 9,047 |
+| `0.60` | 0.3344 | 0.4905 | 0.3976 | 2,436 | 4,849 |
+| `0.70` | 0.4080 | 0.3236 | 0.3610 | 1,607 | 2,332 |
+| `0.80` | 0.5057 | 0.1607 | 0.2440 | 798 | 780 |
 
 ---
 
@@ -135,9 +141,12 @@ Credit-risk-ai/
 │   ├── processed_train.parquet   # Processed training features (245 cols)
 │   └── processed_test.parquet    # Processed held-out test features (61,503 rows)
 ├── models/
-│   ├── best_model.joblib         # Persisted champion model
+│   ├── best_model.joblib         # Persisted champion model (CatBoost)
 │   ├── decision_tree.joblib      # Decision tree model artifact
 │   ├── random_forest.joblib      # Random forest model artifact
+│   ├── xgboost.joblib            # XGBoost model artifact
+│   ├── catboost.joblib           # CatBoost model artifact
+│   ├── neural_network.keras      # Deep neural network artifact
 │   └── preprocessing_pipeline.joblib # Fitted preprocessor transformer
 ├── notebooks/
 │   ├── 01_EDA.ipynb              # Exploratory Data Analysis & missingness audit
@@ -235,9 +244,6 @@ if str(repo_root) not in sys.path:
 
 print(f"✅ Environment initialized. Project Root: {repo_root}")
 ```
-
-> **Private Repository Note:** If your repository is private, clone using your GitHub Personal Access Token (PAT):
-> `!git clone https://<GITHUB_TOKEN>@github.com/<USERNAME>/Credit-risk-ai.git`
 
 ---
 

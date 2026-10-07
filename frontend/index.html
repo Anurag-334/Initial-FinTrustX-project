@@ -1,0 +1,486 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="FinTrustX: Explainable AI Platform for Secure Credit Risk Assessment and Loan Decision Intelligence">
+  <title>FinTrustX — Explainable AI Credit Risk Assessment</title>
+  <!-- Content-Security-Policy -->
+  <meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self'; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com https://cdnjs.cloudflare.com; font-src 'self' https://fonts.gstatic.com https://cdnjs.cloudflare.com; connect-src 'self' http://127.0.0.1:8000 http://localhost:8000;">
+
+  <!-- Google Fonts: Plus Jakarta Sans & JetBrains Mono -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@500;700;800&family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+
+  <!-- Font Awesome Icons CDN -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+
+  <!-- Stylesheet -->
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+  <!-- =========================================================
+       1. NAVBAR
+  ========================================================= -->
+  <header class="navbar">
+    <div class="nav-container">
+      <div class="brand">
+        <div class="brand-icon">
+          <i class="fa-solid fa-shield-halved"></i>
+        </div>
+        <div class="brand-text">
+          <h1>FinTrustX</h1>
+          <span>Explainable AI for Credit Risk Assessment</span>
+        </div>
+      </div>
+
+      <ul class="nav-links">
+        <li class="nav-item"><a href="#dashboard" class="active">Dashboard</a></li>
+        <li class="nav-item"><a href="#assessment">Risk Assessment</a></li>
+        <li class="nav-item"><a href="#model-performance">Model</a></li>
+        <li class="nav-item"><a href="#about">About</a></li>
+      </ul>
+
+      <div class="nav-actions">
+        <div id="status-indicator" class="status-indicator">
+          <span class="status-dot"></span>
+          <span id="status-text">Checking API...</span>
+        </div>
+        <a href="#assessment" class="btn btn-primary btn-sm">
+          <i class="fa-solid fa-plus"></i> New Assessment
+        </a>
+      </div>
+    </div>
+  </header>
+
+  <!-- =========================================================
+       2. HERO / DASHBOARD
+  ========================================================= -->
+  <section id="dashboard" class="hero-section">
+    <div class="hero-container">
+      <div class="hero-tag">
+        <i class="fa-solid fa-microchip"></i> XGBoost Decision Intelligence
+      </div>
+      <h2 class="hero-title">AI-Powered Credit Risk Assessment</h2>
+      <p class="hero-desc">
+        Evaluate applicant credit risk and default probability using an explainable XGBoost machine learning model with real-time SHAP feature attribution.
+      </p>
+      <div class="hero-actions">
+        <a href="#assessment" class="btn btn-primary">
+          <i class="fa-solid fa-bolt"></i> Start Assessment
+        </a>
+        <a href="#model-performance" class="btn btn-secondary">
+          <i class="fa-solid fa-chart-line"></i> View Model Performance
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- =========================================================
+       3. MODEL PERFORMANCE SECTION
+  ========================================================= -->
+  <section id="model-performance" class="metrics-section">
+    <div class="section-title-row">
+      <div>
+        <h2>Champion Model Performance</h2>
+        <p style="color: var(--text-muted); font-size: 0.88rem;">Historical evaluation metrics on 61,503 held-out test applicants.</p>
+      </div>
+      <span class="section-tag"><i class="fa-solid fa-award"></i> Test-Set Benchmark</span>
+    </div>
+
+    <div class="metrics-grid">
+      <div class="metric-card">
+        <div class="metric-card-header">
+          <span class="metric-label">ROC-AUC</span>
+          <i class="fa-solid fa-chart-area"></i>
+        </div>
+        <div id="metric-roc-auc" class="metric-value">0.7610</div>
+        <div class="metric-desc">Area Under the ROC Curve</div>
+      </div>
+
+      <div class="metric-card">
+        <div class="metric-card-header">
+          <span class="metric-label">PR-AUC</span>
+          <i class="fa-solid fa-arrow-trend-up"></i>
+        </div>
+        <div id="metric-pr-auc" class="metric-value">0.2507</div>
+        <div class="metric-desc">Average Precision on Imbalanced Data</div>
+      </div>
+
+      <div class="metric-card">
+        <div class="metric-card-header">
+          <span class="metric-label">Recall</span>
+          <i class="fa-solid fa-bullseye"></i>
+        </div>
+        <div id="metric-recall" class="metric-value">66.97%</div>
+        <div class="metric-desc">Default Capture Rate (Loss Avoidance)</div>
+      </div>
+
+      <div class="metric-card">
+        <div class="metric-card-header">
+          <span class="metric-label">F1 Score</span>
+          <i class="fa-solid fa-scale-balanced"></i>
+        </div>
+        <div id="metric-f1" class="metric-value">0.2724</div>
+        <div class="metric-desc">Harmonic Precision-Recall Balance</div>
+      </div>
+    </div>
+
+    <div class="disclaimer-banner">
+      <i class="fa-solid fa-circle-info" style="margin-right: 0.35rem; color: var(--brand-primary);"></i>
+      <strong>Benchmark Disclaimer:</strong> Model benchmark metrics describe historical test-set performance and do not guarantee individual applicant outcomes.
+    </div>
+  </section>
+
+  <!-- =========================================================
+       4. & 5. ASSESSMENT FORM & RESULT DASHBOARD
+  ========================================================= -->
+  <main id="assessment" class="app-main">
+    <div class="assessment-grid">
+      <!-- Left: Form Panel -->
+      <div class="card form-panel">
+        <div class="card-header">
+          <h3 class="card-title">
+            <i class="fa-solid fa-file-invoice-dollar" style="color: var(--brand-primary);"></i> Applicant Profile
+          </h3>
+          <button id="btn-reset-form" type="button" class="btn btn-secondary btn-sm">
+            <i class="fa-solid fa-rotate-left"></i> Reset Form
+          </button>
+        </div>
+
+        <!-- Preset Profiles Quick Selector -->
+        <div class="presets-bar">
+          <span class="preset-title"><i class="fa-solid fa-wand-magic-sparkles"></i> Quick Presets:</span>
+          <button type="button" class="btn-preset" data-profile="prime">🟢 Prime (Low Risk)</button>
+          <button type="button" class="btn-preset" data-profile="moderate">🟡 Moderate (Review)</button>
+          <button type="button" class="btn-preset" data-profile="subprime">🔴 Subprime (High Risk)</button>
+        </div>
+
+        <form id="assessment-form" novalidate>
+          <!-- A. Personal Information -->
+          <div class="form-section">
+            <div class="form-section-title">
+              <i class="fa-solid fa-user"></i> A. Personal Information
+            </div>
+            <div class="form-group">
+              <label for="SK_ID_CURR">Applicant ID</label>
+              <input type="number" id="SK_ID_CURR" name="SK_ID_CURR" class="form-input" placeholder="e.g. 100002" min="100000">
+              <span class="field-hint">Optional: Enter ID to fetch historical bureau & loan records</span>
+            </div>
+            <div class="grid-2">
+              <div class="form-group">
+                <label class="form-label" for="age_years">Applicant Age (Years) *</label>
+                <input type="number" id="age_years" name="age_years" class="form-input" min="18" max="95" value="42" required>
+              </div>
+              <div class="form-group">
+                <label class="form-label" for="CODE_GENDER">Gender *</label>
+                <select id="CODE_GENDER" name="CODE_GENDER" class="form-select">
+                  <option value="M">Male (M)</option>
+                  <option value="F" selected>Female (F)</option>
+                </select>
+              </div>
+            </div>
+            <div class="grid-2">
+              <div class="form-group">
+                <label class="form-label" for="NAME_EDUCATION_TYPE">Education *</label>
+                <select id="NAME_EDUCATION_TYPE" name="NAME_EDUCATION_TYPE" class="form-select">
+                  <option value="Higher education" selected>Higher education</option>
+                  <option value="Secondary / secondary special">Secondary / secondary special</option>
+                  <option value="Incomplete higher">Incomplete higher</option>
+                  <option value="Lower secondary">Lower secondary</option>
+                  <option value="Academic degree">Academic degree</option>
+                </select>
+              </div>
+              <div class="form-group">
+                <label class="form-label" for="NAME_FAMILY_STATUS">Family Status *</label>
+                <select id="NAME_FAMILY_STATUS" name="NAME_FAMILY_STATUS" class="form-select">
+                  <option value="Married" selected>Married</option>
+                  <option value="Single / not married">Single / not married</option>
+                  <option value="Civil marriage">Civil marriage</option>
+                  <option value="Separated">Separated</option>
+                  <option value="Widow">Widow</option>
+                </select>
+              </div>
+            </div>
+            <div class="grid-2">
+              <div class="form-group">
+                <label class="form-label" for="CNT_CHILDREN">Number of Children</label>
+                <input type="number" id="CNT_CHILDREN" name="CNT_CHILDREN" class="form-input" min="0" max="15" value="0">
+              </div>
+              <div class="form-group">
+                <label class="form-label" for="NAME_HOUSING_TYPE">Housing Situation</label>
+                <select id="NAME_HOUSING_TYPE" name="NAME_HOUSING_TYPE" class="form-select">
+                  <option value="House / apartment" selected>House / apartment</option>
+                  <option value="Rented apartment">Rented apartment</option>
+                  <option value="With parents">With parents</option>
+                  <option value="Municipal apartment">Municipal apartment</option>
+                </select>
+              </div>
+            </div>
+          </div>
+
+          <!-- B. Employment Information -->
+          <div class="form-section">
+            <div class="form-section-title">
+              <i class="fa-solid fa-briefcase"></i> B. Employment Information
+            </div>
+            <div class="grid-2">
+              <div class="form-group">
+                <label class="form-label" for="AMT_INCOME_TOTAL">Annual Income ($) *</label>
+                <input type="number" id="AMT_INCOME_TOTAL" name="AMT_INCOME_TOTAL" class="form-input" min="1000" step="1000" value="270000" required>
+              </div>
+              <div class="form-group">
+                <label class="form-label" for="employed_years">Employment Duration (Years) *</label>
+                <input type="number" id="employed_years" name="employed_years" class="form-input" min="0" max="50" step="0.5" value="8.5" required>
+              </div>
+            </div>
+            <div class="grid-2">
+              <div class="form-group">
+                <label class="form-label" for="NAME_INCOME_TYPE">Income Source Type</label>
+                <select id="NAME_INCOME_TYPE" name="NAME_INCOME_TYPE" class="form-select">
+                  <option value="Commercial associate" selected>Commercial associate</option>
+                  <option value="Working">Working</option>
+                  <option value="State servant">State servant</option>
+                  <option value="Pensioner">Pensioner</option>
+                </select>
+              </div>
+              <div class="form-group">
+                <label class="form-label" for="OCCUPATION_TYPE">Occupation Category</label>
+                <select id="OCCUPATION_TYPE" name="OCCUPATION_TYPE" class="form-select">
+                  <option value="Managers" selected>Managers</option>
+                  <option value="Core staff">Core staff</option>
+                  <option value="Laborers">Laborers</option>
+                  <option value="High skill tech staff">High skill tech staff</option>
+                  <option value="Accountants">Accountants</option>
+                  <option value="Drivers">Drivers</option>
+                  <option value="Sales staff">Sales staff</option>
+                </select>
+              </div>
+            </div>
+          </div>
+
+          <!-- C. Financial & Asset Information -->
+          <div class="form-section">
+            <div class="form-section-title">
+              <i class="fa-solid fa-wallet"></i> C. Loan & Financial Details
+            </div>
+            <div class="grid-2">
+              <div class="form-group">
+                <label class="form-label" for="AMT_CREDIT">Credit Amount ($) *</label>
+                <input type="number" id="AMT_CREDIT" name="AMT_CREDIT" class="form-input" min="5000" step="1000" value="450000" required>
+              </div>
+              <div class="form-group">
+                <label class="form-label" for="AMT_ANNUITY">Loan Annuity ($) *</label>
+                <input type="number" id="AMT_ANNUITY" name="AMT_ANNUITY" class="form-input" min="500" step="500" value="28000" required>
+              </div>
+            </div>
+            <div class="grid-2">
+              <div class="form-group">
+                <label class="form-label" for="AMT_GOODS_PRICE">Price of Goods ($) *</label>
+                <input type="number" id="AMT_GOODS_PRICE" name="AMT_GOODS_PRICE" class="form-input" min="1000" step="1000" value="450000" required>
+              </div>
+              <div class="form-group">
+                <label class="form-label" for="NAME_CONTRACT_TYPE">Contract Type</label>
+                <select id="NAME_CONTRACT_TYPE" name="NAME_CONTRACT_TYPE" class="form-select">
+                  <option value="Cash loans" selected>Cash loans</option>
+                  <option value="Revolving loans">Revolving loans</option>
+                </select>
+              </div>
+            </div>
+            <div class="grid-2">
+              <div class="form-group">
+                <label class="form-label" for="FLAG_OWN_CAR">Owns Vehicle?</label>
+                <select id="FLAG_OWN_CAR" name="FLAG_OWN_CAR" class="form-select">
+                  <option value="Y" selected>Yes (Y)</option>
+                  <option value="N">No (N)</option>
+                </select>
+              </div>
+              <div class="form-group">
+                <label class="form-label" for="FLAG_OWN_REALTY">Owns Real Estate?</label>
+                <select id="FLAG_OWN_REALTY" name="FLAG_OWN_REALTY" class="form-select">
+                  <option value="Y" selected>Yes (Y)</option>
+                  <option value="N">No (N)</option>
+                </select>
+              </div>
+            </div>
+          </div>
+
+          <!-- D. External Credit Bureau Ratings -->
+          <div class="form-section">
+            <div class="form-section-title">
+              <i class="fa-solid fa-chart-pie"></i> D. External Credit Bureau Ratings (Normalized 0.0 - 1.0)
+            </div>
+            <div class="form-group">
+              <label class="form-label" for="slider-ext1">
+                <span>Bureau Rating 1 (EXT_SOURCE_1)</span>
+                <span id="val-ext1" class="range-badge">0.78</span>
+              </label>
+              <div class="form-range-container">
+                <input type="range" id="slider-ext1" name="EXT_SOURCE_1" class="form-range" min="0.01" max="0.99" step="0.01" value="0.78">
+              </div>
+            </div>
+            <div class="form-group">
+              <label class="form-label" for="slider-ext2">
+                <span>Bureau Rating 2 (EXT_SOURCE_2)</span>
+                <span id="val-ext2" class="range-badge">0.82</span>
+              </label>
+              <div class="form-range-container">
+                <input type="range" id="slider-ext2" name="EXT_SOURCE_2" class="form-range" min="0.01" max="0.99" step="0.01" value="0.82">
+              </div>
+            </div>
+            <div class="form-group">
+              <label class="form-label" for="slider-ext3">
+                <span>Bureau Rating 3 (EXT_SOURCE_3)</span>
+                <span id="val-ext3" class="range-badge">0.86</span>
+              </label>
+              <div class="form-range-container">
+                <input type="range" id="slider-ext3" name="EXT_SOURCE_3" class="form-range" min="0.01" max="0.99" step="0.01" value="0.86">
+              </div>
+            </div>
+          </div>
+
+          <button id="btn-submit-assessment" type="submit" class="btn btn-primary" style="width: 100%; padding: 0.9rem; font-size: 1rem;">
+            <i class="fa-solid fa-bolt"></i> Assess Credit Risk
+          </button>
+        </form>
+      </div>
+
+      <!-- Right: Result Dashboard Panel -->
+      <div class="results-container">
+        <div class="card">
+          <!-- Empty State -->
+          <div id="empty-state" class="empty-state">
+            <i class="fa-solid fa-chart-column"></i>
+            <h3>Awaiting Assessment</h3>
+            <p>Complete the applicant form and click Assess Credit Risk to evaluate default risk and view SHAP drivers.</p>
+          </div>
+
+          <!-- Loading State -->
+          <div id="loading-state" class="loading-state">
+            <div class="spinner"></div>
+            <h3 style="font-size: 1.15rem; font-weight: 700; margin-bottom: 0.35rem;">Analyzing applicant...</h3>
+            <p style="color: var(--text-muted); font-size: 0.85rem;">Transforming 121 features through preprocessing pipeline & scoring XGBoost model...</p>
+          </div>
+
+          <!-- Active Prediction Result -->
+          <div id="result-content" class="result-content">
+            <div class="card-header" style="margin-bottom: 1rem;">
+              <h3 class="card-title">
+                <i class="fa-solid fa-square-poll-vertical" style="color: var(--brand-primary);"></i> Decision Intelligence
+              </h3>
+            </div>
+
+            <!-- Decision Hero Banner -->
+            <div id="decision-hero" class="decision-hero approved">
+              <div class="decision-hero-text">
+                <span>Underwriting Recommendation</span>
+                <h3 id="decision-text">Likely Approved</h3>
+              </div>
+              <div id="tier-badge" class="tier-badge low">Low Risk</div>
+            </div>
+
+            <!-- KPI Row -->
+            <div class="kpi-row">
+              <div class="kpi-box">
+                <div class="kpi-box-label">Default Prob</div>
+                <div id="res-probability" class="kpi-box-value" style="color: #38bdf8;">8.9%</div>
+              </div>
+              <div class="kpi-box">
+                <div class="kpi-box-label">Risk Score</div>
+                <div id="res-score" class="kpi-box-value">8.9 / 100</div>
+              </div>
+              <div class="kpi-box">
+                <div class="kpi-box-label">Threshold</div>
+                <div id="res-threshold" class="kpi-box-value" style="color: var(--text-muted);">0.50</div>
+              </div>
+            </div>
+
+            <!-- Horizontal Probability Meter -->
+            <div class="meter-box">
+              <div class="meter-box-header">
+                <span>Default Probability Scale</span>
+              </div>
+              <div class="progress-track">
+                <div id="progress-fill" class="progress-fill"></div>
+              </div>
+              <div class="progress-legend">
+                <span>0% (Low)</span>
+                <span>20% (Moderate)</span>
+                <span>40% (High)</span>
+                <span>60%+ (Critical)</span>
+              </div>
+            </div>
+
+            <!-- Explainability Section -->
+            <div class="xai-section">
+              <div class="xai-title">
+                <i class="fa-solid fa-brain" style="color: var(--brand-primary);"></i> Why did the model make this prediction?
+              </div>
+              <div id="shap-factors-container">
+                <!-- Dynamically injected via app.js -->
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </main>
+
+  <!-- =========================================================
+       10. & 11. MODEL INFO & ABOUT FINTRUSTX
+  ========================================================= -->
+  <section id="about" class="info-section">
+    <div class="info-grid">
+      <div class="info-card">
+        <h3><i class="fa-solid fa-network-wired"></i> Deployed Model: XGBoost</h3>
+        <p>
+          FinTrustX deploys a tuned <strong>XGBoost (Extreme Gradient Boosting)</strong> classifier trained with scale_pos_weight on highly imbalanced credit default data.
+        </p>
+        <ul>
+          <li><strong>Task:</strong> Binary Credit Default Classification (TARGET = 1 for Default)</li>
+          <li><strong>Preprocessing:</strong> ColumnTransformer handling 121 raw inputs $\to$ 245 preprocessed features</li>
+          <li><strong>Benchmark ROC-AUC:</strong> 0.7610 on held-out test data</li>
+          <li><strong>Explainability Engine:</strong> Tree SHAP (SHapley Additive exPlanations) for transparent adverse action codes</li>
+        </ul>
+      </div>
+
+      <div class="info-card">
+        <h3><i class="fa-solid fa-gavel"></i> About FinTrustX & Governance</h3>
+        <p>
+          FinTrustX is an explainable AI platform designed to assist credit risk underwriters. The system executes the following workflow:
+        </p>
+        <ul>
+          <li>1. Collects applicant demographic, financial, and credit bureau inputs.</li>
+          <li>2. Applies leakage-safe imputation and feature transformations.</li>
+          <li>3. Runs XGBoost to estimate default risk probability.</li>
+          <li>4. Computes localized SHAP attributions and presents reason codes.</li>
+        </ul>
+        <p style="margin-top: 1rem; font-size: 0.82rem; color: var(--text-subtle);">
+          <em>Decision-support disclaimer: FinTrustX is an automated risk intelligence tool intended to assist credit decisioning and should not be used as the sole basis for real-world lending without human underwriter review and regulatory compliance controls.</em>
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <!-- =========================================================
+       FOOTER & TOAST NOTIFICATIONS
+  ========================================================= -->
+  <footer class="footer">
+    <div class="footer-container">
+      <div>
+        <strong>FinTrustX</strong> — Explainable AI Credit Risk Platform &bull; Built by Anurag Kashyap
+      </div>
+      <div>
+        Decision support aid &bull; Not financial advice &bull; Subject to human review
+      </div>
+    </div>
+  </footer>
+
+  <div id="toast-container" class="toast-container"></div>
+
+  <!-- Main Application Script -->
+  <script src="js/app.js"></script>
+</body>
+</html>

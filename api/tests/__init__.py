@@ -1,0 +1,3 @@
+"""
+FinTrustX API Test Suite
+"""
